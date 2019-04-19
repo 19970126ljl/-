@@ -11,11 +11,11 @@ graph LR;
     代码优化-->目标代码生成;
 ```
 ```mermaid
-graph TD;
-+-->3;
-+-->4;
-=-->+;
-a-->=;
+graph LR;
+3-->+;
+4-->+;
++-->=;
+=-->a;
 
 ```
 
@@ -24,3 +24,14 @@ a-->=;
    - 现代计算机结构都是参考了冯诺依曼结构：1. 运算器 2. 控制器 3. 存储器 4. 输入 5. 输出。
 
 ## 示例代码
+```python
+q=PriorityQueue()
+n=input("请输入元素个数:\n")
+n=int(n)
+for i in range(n):
+    name=str(input("请输入元素名称:\n"))
+    prio=int(input("请输入优先值\n"))
+    q.push(Item(name),prio)
+for i in range(n):
+    print(q.pop())
+```
